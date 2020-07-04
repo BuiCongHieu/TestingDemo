@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
+    <link href="~/Assets/css/Styles.css" rel="stylesheet" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- Navigation start -->
+    @RenderPage("_Nav.cshtml")
+    <!--End Nav -->
+    @RenderBody()
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="width:700px;">
+                    <div class="modal-header">
+                        <h3 class="modal-title text-center">Vui lòng nhập passcode</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <div translate="no">
+                            <div class="login-wrap" style="background-color:white;">
+                                <div style="width:100%; padding:1.7em;" class="login-html text-center">
+                                    <div>
+                                        <label style="margin-top:5px; text-align:left!important; width:90%">Passcode</label>
+                                        <input style="background-color:white;border-bottom-color:red;" class="form-input2" id="pass1" name="passcode" placeholder="Passcode" required />
+                                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                                    </div>
+                                    <div>
+                                        <p>Chọn loại dịch vụ</p>
+                                    </div>
+                                    <div class="row d-flex justify-content-around align-items-center">
+                                        <div class="col-md-3 login-ser" style="border: 2px solid red;" id="service_1">
+                                            <img class="img-rating" src="~/Assets/images/images/login/bucket.png" />
+                                            <p>Vệ sinh</p>
+                                        </div>
+                                        <div class="col-md-3 login-ser" style="border: 2px solid red;" id="service_2">
+                                            <img class="img-rating" src="~/Assets/images/images/login/policeman.png" />
+                                            <p>Bảo vệ</p>
+                                        </div>
+                                        <div class="col-md-3 login-ser" style="border: 2px solid red;" id="service_3">
+                                            <img class="img-rating" src="~/Assets/images/images/login/social-care.png" />
+                                            <p>Chăm sóc học viên</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button id="btnlogin2" style="width: 90% !important; background-color:#d5204c;" class="btnrating">Đổi dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Đăng xuất</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div translate="no">
+                            <div class="login-wrap" style="background-color:white;">
+                                <div style="width:100%; padding:1.7em;" class="login-html text-center">
+                                    <div>
+                                        <label style="margin-top:5px; text-align:left!important; width:90%">Passcode</label>
+                                        <input style="background-color:white;border-bottom-color:red; color:red;" class="form-input2" id="pass2" name="passcode" placeholder="Passcode" required />
+                                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                                    </div>
+
+                                    <div>
+                                        <button id="btnlogout" style="width: 90% !important; background-color:#d5204c;" class="btnrating">Đăng xuất</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/Assets/js/logoutJS.js"></script>
+        <script src="~/Assets/js/changeLoginJS.js"></script>
+</body>
+</html>

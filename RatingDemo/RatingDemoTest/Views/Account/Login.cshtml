@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .login-ser {
+        transition: all 0.3s ease-in-out;
+    }
+</style>
+<section>
+
+    <div translate="no">
+        <div class="login-wrap" style="background-color:#c6254c">
+            <div style="width:100%; padding:1.7em;" class="login-html text-center">
+                <div>
+                    <img class="btninput" src="~/Assets/images/images/login/arrow-button.png" />
+                </div>
+                <div>
+                    <h3 style="margin-top:10px;font-weight:bold;font-size:1.6em;">Đăng nhập</h3>
+                </div>
+                <div>
+                    <label style="margin-top:5px; text-align:left!important; width:90%">Passcode</label>
+                    <input class="form-input2" id="pass" name="passcode" placeholder="Passcode" required />
+                    <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                </div>
+                <div>
+                    <p>Chọn loại dịch vụ</p>
+                </div>
+                <div class="row d-flex justify-content-around align-items-center">
+                    <div class="col-md-3 login-ser" id="service_1">
+                        <img class="img-rating" src="~/Assets/images/images/login/bucket.png" />
+                        <p>Vệ sinh</p>
+                    </div>
+                    <div class="col-md-3 login-ser" id="service_2">
+                        <img class="img-rating" src="~/Assets/images/images/login/policeman.png" />
+                        <p>Bảo vệ</p>
+                    </div>
+                    <div class="col-md-3 login-ser" id="service_3">
+                        <img class="img-rating" src="~/Assets/images/images/login/social-care.png" />
+                        <p>Chăm sóc học viên</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="btnlogin" style="width: 90% !important; background-color:#d5204c;" class="btnrating">Bắt đầu đánh giá</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Assets/js/loginJS.js"></script>

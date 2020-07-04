@@ -1,0 +1,12 @@
+D:\ASP.NET MVC\RatingDemoTest\Service\obj\Debug\Service.csprojAssemblyReference.cache
+D:\ASP.NET MVC\RatingDemoTest\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\Service.dll
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\Service.pdb
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\Model.dll
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\EntityFramework.dll
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\Model.pdb
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\Model.dll.config
+D:\ASP.NET MVC\RatingDemoTest\Service\bin\Debug\EntityFramework.xml
+D:\ASP.NET MVC\RatingDemoTest\Service\obj\Debug\Service.csproj.CopyComplete
+D:\ASP.NET MVC\RatingDemoTest\Service\obj\Debug\Service.dll
+D:\ASP.NET MVC\RatingDemoTest\Service\obj\Debug\Service.pdb

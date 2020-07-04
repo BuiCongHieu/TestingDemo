@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    
+    <div class="rating-wrap text-center">
+        <div class="rating-html">
+
+            <img class="img-success" src="~/Assets/images/images/emoji/Asset.png" />
+            <div id="emoji"></div>
+            <div>
+                <h3 class="htext">Cảm ơn đánh giá của bạn.</h3>
+            </div>
+            <div>
+                <p class="ptext">ALT IELTS Gia Sư sẽ nỗ lực hơn để đem đến nhiều trải nghiệm thú vị trong thời gian tới.</p>
+                <p class="ptext" style="display:inline-block;">Hãy tiếp tục theo dõi chúng tôi tại</p> <a href="#" style="font-weight:bold;color:#0c0b0b; font-size:1.4em;">ieltsgiasu.com</a>
+            </div>
+            <button id="btnBack" class="btnlogin">Đánh giá lại từ đầu</button>
+        </div>
+    </div>
+</div>
+<script>
+  
+    var serviceId = sessionStorage['ServiceId'];
+    setTimeout( setService, 5000);
+    //setTimeout(setService, 5000);
+    $('#btnBack').on('click', function () {
+        setService();
+    });
+    function checkTime(i) {
+        if (i >=0) {
+            i = "5" - i;
+        }
+        return i;
+    }
+    function setService() {
+        if (serviceId == 1) {
+            window.location.href = '/Rating/Cleaning';
+        }
+        else {
+            window.location.href = '/Rating/Protector';
+        }
+    }
+</script>

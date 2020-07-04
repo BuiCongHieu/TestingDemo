@@ -1,0 +1,15 @@
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\Model.dll.config
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\Model.dll
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\Model.pdb
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\EntityFramework.dll
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\EntityFramework.xml
+D:\ASP.NET MVC\RatingDemoTest\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.csproj.CopyComplete
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.dll
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.pdb
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.Migrations.dbv1.resources
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\ASP.NET MVC\RatingDemoTest\Model\obj\Debug\Model.Migrations.dbv2.resources

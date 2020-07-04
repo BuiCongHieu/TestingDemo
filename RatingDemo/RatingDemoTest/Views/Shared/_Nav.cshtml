@@ -1,0 +1,24 @@
+﻿<section>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="text-center" style="width: 100%;">
+                <img style="width:150px;" src="~/Assets/images/images/logo.png" />"
+            </div>
+            <div id="setUser" class="dropdown text-right">
+                <div id="custom" class="dropbtn"><img src="https://img.icons8.com/material-sharp/30/000000/circled-menu.png" /></div>
+                <div class="dropdown-content ">
+
+                    <!-- Trigger the modal with a button -->
+                    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Đổi dịch vụ</a>
+                    <a class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+<script>
+    var id = sessionStorage['ServiceId'];
+    if (id == null || id == 0) {
+        $('#setUser').css("visibility", "hidden");
+    }
+</script>

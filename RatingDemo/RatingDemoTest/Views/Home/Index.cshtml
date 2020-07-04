@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="img" style="background-image:url(../../Assets/images/images/rating2.png); height:800px;">
+    <div class="container text-center">
+        <h3 class="htext">ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ</h3>
+        <p class="ptext">Khảo sát dịch vụ tại ALTIELTS gia sư</p>
+        <button id="btnlogin" class="btnlogin">Bắt đầu</button>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('#btnlogin').click(function () {
+            window.location.href = '/Account/Login';
+        });
+    });
+</script>

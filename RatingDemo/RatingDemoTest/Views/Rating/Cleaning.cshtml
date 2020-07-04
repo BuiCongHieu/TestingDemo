@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Cleaning";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="text-center">
+        <h3 class="htext">ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ</h3>
+        <div><p class="ptext" style="display: inline-block;">Bạn đang đánh giá chi nhánh</p> <p style="font-weight:bold; color:#808080; display: inline-block; font-size:1.3em;">Phan Chu Trinh</p></div>
+    </div>
+    <div class="rating-wrap text-center">
+        <div class="rating-html">
+            <p style="font-weight:bold;font-size:1.4em;">Bạn thấy lớp học, văn phòng ALT IELTS gia sư có sạch sẽ không?</p>
+            <d id="emoji">
+                <img id="emoji_image" />
+                <p id="emoji_text"></p>
+            </d>
+            <div>
+                @for (var item = 0; item < 5; item++)
+                {
+                    <a href="#"  data-id="item"><img class="img-emoji" src="~/Assets/images/images/star-not-rating.png" id="start-@item" /></a>
+                }
+            </div>
+            <div>
+                <input id="comment" class="ptext form-input" type="text" placeholder="Xin cho biết góp ý của bạn để chúng tôi có thể cải thiện dịch vụ tốt hơn" />
+            </div>
+            <button id="btnSend" class="btnlogin">Gửi</button>
+        </div>
+    </div>
+</div>
+<script src="~/Assets/js/app_global.js"></script>
+<script>
+    let startID = 0;
+    $('.img-emoji').on('click', function (e) {
+        const target = e.currentTarget;
+        const id = target.id;
+        const starId = Number.parseInt(id.substr(id.length - 1));
+        starID = starId + 1;
+        resetAllStarts();
+        setStarColor(starId);
+        setEmoji(starID);
+        //let startid = e.currentTarget.setAttribute("src", "../../Assets/images/images/star.png");
+    });
+    //$('#btnSend').on('click', function () {
+
+    //});
+    function resetAllStarts() {
+        //console.log("clear");
+        for (let i = 0; i < 5; i++) {
+            $(`#start-${i}`).attr("src", "../../Assets/images/images/star-not-rating.png");
+        }
+    }
+
+    function setStarColor(index) {
+        //console.log("set");
+        for (let i = 0; i <= index; i++) {
+            $(`#start-${i}`).attr("src", "../../Assets/images/images/star.png");
+        }
+    }
+    function setEmoji(stars) {
+        let emojiImage = $("#emoji_image");
+        let emojiText = $("#emoji_text");
+        const emojiPath = getEmoji(stars);
+        const message = getMessage(1, stars);
+        emojiImage.attr("src", emojiPath);
+        emojiText.text(message);
+    }
+    $('#btnSend').on('click', function () {
+        var cmt = $('#comment').val();
+        var serviceid = sessionStorage['ServiceId'];
+        console.log(serviceid);
+        console.log(cmt);
+        $.ajax({
+            type: 'post',
+            url: '/Rating/Insert',
+            data: {
+                serviceId: serviceid,
+                score: starID,
+                comment: cmt
+            },
+            success: function (res) {
+                if (res.status == 202) {
+                    window.location.href = '/Rating/Success';
+                }
+            }
+        });
+    });
+</script>
